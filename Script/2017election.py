@@ -22,10 +22,9 @@ sc = SparkSession(sc)
 
 df1 = sc.read.format("csv").option("header", "true").load("/home/sofienkhanfir/Bureau/Projet/nifi-dev/nifi-1.15.0/2017_data")
 
-df1.show()
-
 to_sum=df1.select('Code du département','Inscrits','Abstentions','Votants','Blancs','Nuls','Exprimés')
 sum_exprs = {x: "sum" for x in to_sum.columns if x is not to_sum.columns[0]}
 sum_df=to_sum.groupBy("Code du département").agg(sum_exprs)
 sum_df=sum_df.withColumnRenamed("sum(Abstentions)", "Nombre d'abstentions").withColumnRenamed("sum(Exprimés)", "Nombre de votes exprimés").withColumnRenamed("sum(Blancs)", "Nombre de votes blancs") .withColumnRenamed("sum(Inscrits)", "Nombre d'inscrits") .withColumnRenamed("sum(Votants)", "Nombre de votants") .withColumnRenamed("sum(Nuls)", "Nombre de votes Nuls")
 
+df1.toPandas().to_csv("../final_data/presidentiel2017.csv",index=False)
