@@ -15,9 +15,13 @@ Le projet comporte 3 parties:
 Cette première étape est indispensable pour alimenter le pipeline de données en inputs.
 
 Nous avons mis en place une API moyennant la bibliothéque `flask_restful` consommant l'API `tweepy` ayant pour rôle de scraper les données à partir de twitter.
+
 Cette API joue le rôle d'intermédiaire entre twitter et `Nifi` , notre gestionnaire de flux de données.
+
 Le script de l'API est disponible sous le répertoire *"/twitter_scraping"*.
-Ci dessous une illustration du schéma réalisé avec `Nifi`
+
+Ci dessous quelques illustrations des schémas réalisé avec `Nifi`.
+![Nifi Schema](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/first_capturePNG.PNG)
 
 ## Traitement des données (mise en forme, nettoyage..)
 
