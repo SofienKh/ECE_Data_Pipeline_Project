@@ -1,0 +1,22 @@
+[2021-12-17 21:48:11,364] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dag_of_spark_files.Valerie_Pecresse scheduled__2021-12-16T00:00:00+00:00 [queued]>
+[2021-12-17 21:48:11,369] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dag_of_spark_files.Valerie_Pecresse scheduled__2021-12-16T00:00:00+00:00 [queued]>
+[2021-12-17 21:48:11,369] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-17 21:48:11,369] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2021-12-17 21:48:11,369] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-17 21:48:11,376] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): Valerie_Pecresse> on 2021-12-16 00:00:00+00:00
+[2021-12-17 21:48:11,378] {standard_task_runner.py:52} INFO - Started process 52264 to run task
+[2021-12-17 21:48:11,381] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'dag_of_spark_files', 'Valerie_Pecresse', 'scheduled__2021-12-16T00:00:00+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmp87ig47od', '--error-file', '/tmp/tmp8i6q0899']
+[2021-12-17 21:48:11,382] {standard_task_runner.py:77} INFO - Job 41: Subtask Valerie_Pecresse
+[2021-12-17 21:48:11,400] {logging_mixin.py:109} INFO - Running <TaskInstance: dag_of_spark_files.Valerie_Pecresse scheduled__2021-12-16T00:00:00+00:00 [running]> on host sofienkhanfir-VirtualBox
+[2021-12-17 21:48:11,420] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dag_of_spark_files
+AIRFLOW_CTX_TASK_ID=Valerie_Pecresse
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-16T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-16T00:00:00+00:00
+[2021-12-17 21:48:32,444] {python.py:152} INFO - Done. Returned value was: None
+[2021-12-17 21:48:32,453] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=dag_of_spark_files, task_id=Valerie_Pecresse, execution_date=20211216T000000, start_date=20211217T204811, end_date=20211217T204832
+[2021-12-17 21:48:32,477] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-17 21:48:32,569] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

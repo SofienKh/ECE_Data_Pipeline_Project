@@ -1,0 +1,115 @@
+[2021-12-17 21:50:25,414] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dag_of_spark_files.Jean_Lasalle scheduled__2021-12-16T00:00:00+00:00 [queued]>
+[2021-12-17 21:50:25,417] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dag_of_spark_files.Jean_Lasalle scheduled__2021-12-16T00:00:00+00:00 [queued]>
+[2021-12-17 21:50:25,417] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-17 21:50:25,417] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2021-12-17 21:50:25,417] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-17 21:50:25,426] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): Jean_Lasalle> on 2021-12-16 00:00:00+00:00
+[2021-12-17 21:50:25,428] {standard_task_runner.py:52} INFO - Started process 53470 to run task
+[2021-12-17 21:50:25,431] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'dag_of_spark_files', 'Jean_Lasalle', 'scheduled__2021-12-16T00:00:00+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmp1a_7t7s8', '--error-file', '/tmp/tmptb0yxpjk']
+[2021-12-17 21:50:25,431] {standard_task_runner.py:77} INFO - Job 46: Subtask Jean_Lasalle
+[2021-12-17 21:50:25,447] {logging_mixin.py:109} INFO - Running <TaskInstance: dag_of_spark_files.Jean_Lasalle scheduled__2021-12-16T00:00:00+00:00 [running]> on host sofienkhanfir-VirtualBox
+[2021-12-17 21:50:25,466] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dag_of_spark_files
+AIRFLOW_CTX_TASK_ID=Jean_Lasalle
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-16T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-16T00:00:00+00:00
+[2021-12-17 21:50:28,955] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 53470
+[2021-12-17 21:50:28,956] {taskinstance.py:1411} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-12-17 21:50:28,956] {clientserver.py:502} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1413, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-12-17 21:50:28,957] {clientserver.py:507} INFO - Closing down clientserver connection
+[2021-12-17 21:50:28,957] {java_gateway.py:1055} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1413, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/clientserver.py", line 503, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2021-12-17 21:50:28,959] {taskinstance.py:1703} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 151, in execute
+    return_value = self.execute_callable()
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 162, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/sofienkhanfir/Bureau/Projet/Airflow/dags/Scripts_airforlow/Jean_Lasalle.py", line 45, in main_lasalle
+    sc = pyspark.SparkContext('local')
+  File "/opt/spark/python/pyspark/context.py", line 146, in __init__
+    self._do_init(master, appName, sparkHome, pyFiles, environment, batchSize, serializer,
+  File "/opt/spark/python/pyspark/context.py", line 209, in _do_init
+    self._jsc = jsc or self._initialize_context(self._conf._jconf)
+  File "/opt/spark/python/pyspark/context.py", line 329, in _initialize_context
+    return self._jvm.JavaSparkContext(jconf)
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/java_gateway.py", line 1573, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext
+[2021-12-17 21:50:28,982] {taskinstance.py:1270} INFO - Marking task as FAILED. dag_id=dag_of_spark_files, task_id=Jean_Lasalle, execution_date=20211216T000000, start_date=20211217T205025, end_date=20211217T205028
+[2021-12-17 21:50:29,062] {standard_task_runner.py:88} ERROR - Failed to execute job 46 for task Jean_Lasalle
+Traceback (most recent call last):
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 151, in execute
+    return_value = self.execute_callable()
+  File "/home/sofienkhanfir/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 162, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/sofienkhanfir/Bureau/Projet/Airflow/dags/Scripts_airforlow/Jean_Lasalle.py", line 45, in main_lasalle
+    sc = pyspark.SparkContext('local')
+  File "/opt/spark/python/pyspark/context.py", line 146, in __init__
+    self._do_init(master, appName, sparkHome, pyFiles, environment, batchSize, serializer,
+  File "/opt/spark/python/pyspark/context.py", line 209, in _do_init
+    self._jsc = jsc or self._initialize_context(self._conf._jconf)
+  File "/opt/spark/python/pyspark/context.py", line 329, in _initialize_context
+    return self._jvm.JavaSparkContext(jconf)
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/java_gateway.py", line 1573, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/py4j-0.10.9.2-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext
+[2021-12-17 21:50:29,141] {process_utils.py:66} INFO - Process psutil.Process(pid=53470, status='terminated', exitcode=1, started='21:50:24') (53470) terminated with exit code 1
+[2021-12-17 21:50:29,595] {process_utils.py:66} INFO - Process psutil.Process(pid=53471, status='terminated', started='21:50:24') (53471) terminated with exit code None

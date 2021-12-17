@@ -1,0 +1,22 @@
+[2021-12-17 21:50:50,753] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dag_of_spark_files.Yannick_Jadot scheduled__2021-12-17T20:00:00+00:00 [queued]>
+[2021-12-17 21:50:50,784] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: dag_of_spark_files.Yannick_Jadot scheduled__2021-12-17T20:00:00+00:00 [queued]>
+[2021-12-17 21:50:50,784] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-17 21:50:50,784] {taskinstance.py:1242} INFO - Starting attempt 1 of 1
+[2021-12-17 21:50:50,784] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-12-17 21:50:50,818] {taskinstance.py:1262} INFO - Executing <Task(PythonOperator): Yannick_Jadot> on 2021-12-17 20:00:00+00:00
+[2021-12-17 21:50:50,820] {standard_task_runner.py:52} INFO - Started process 53592 to run task
+[2021-12-17 21:50:50,843] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'dag_of_spark_files', 'Yannick_Jadot', 'scheduled__2021-12-17T20:00:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmpx2n4rpnz', '--error-file', '/tmp/tmp4v40gun8']
+[2021-12-17 21:50:50,843] {standard_task_runner.py:77} INFO - Job 50: Subtask Yannick_Jadot
+[2021-12-17 21:50:50,909] {logging_mixin.py:109} INFO - Running <TaskInstance: dag_of_spark_files.Yannick_Jadot scheduled__2021-12-17T20:00:00+00:00 [running]> on host sofienkhanfir-VirtualBox
+[2021-12-17 21:50:50,971] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dag_of_spark_files
+AIRFLOW_CTX_TASK_ID=Yannick_Jadot
+AIRFLOW_CTX_EXECUTION_DATE=2021-12-17T20:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-12-17T20:00:00+00:00
+[2021-12-17 21:51:21,864] {python.py:152} INFO - Done. Returned value was: None
+[2021-12-17 21:51:21,885] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=dag_of_spark_files, task_id=Yannick_Jadot, execution_date=20211217T200000, start_date=20211217T205050, end_date=20211217T205121
+[2021-12-17 21:51:21,950] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-12-17 21:51:22,053] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
