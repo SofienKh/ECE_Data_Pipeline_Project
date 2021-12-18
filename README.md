@@ -73,3 +73,4 @@ Nous avons pu réaliser à partir des données politiques collectées deux appli
 - Un Word cloud avec les termes les plus récurrents sur twitter (A partir des données non structurées collectées).
 
 ![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/word_cloud.png)
+
