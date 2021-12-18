@@ -66,10 +66,10 @@ Dans le but d'automatiser notre flot de données, nous avons utilisés deux DAGs
 Nous avons pu réaliser à partir des données politiques collectées deux applications:
 
 - Une analyse des sentiments.
-- Une carte interactive comportant les statistiques par département (A partir des données structurées collectées) `disponible sous le repertoire /Scripts/temp-plot.html`.
+- Une carte interactive comportant les statistiques par département (A partir des données structurées collectées) disponible sous le repertoire `/Scripts/temp-plot.html`.
 
-![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/first_capturePNG.PNG)
+![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/france_map.png)
 
 - Un Word cloud avec les termes les plus récurrents sur twitter (A partir des données non structurées collectées).
 
-![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/first_capturePNG.PNG)
+![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/word_cloud.png)
