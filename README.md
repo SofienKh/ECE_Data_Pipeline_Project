@@ -21,8 +21,12 @@ Cette API joue le rôle d'intermédiaire entre twitter et `Nifi` , notre gestion
 Le script de l'API est disponible sous le répertoire *"/twitter_scraping"*.
 
 Ci dessous quelques illustrations des schémas réalisé avec `Nifi`.
-![Nifi Schema](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/first_capturePNG.PNG)
 
+![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/third_capture.PNG)
+-------
+![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/second_capture.PNG)
+-------
+![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/first_capturePNG.PNG)
 ## Traitement des données (mise en forme, nettoyage..)
 
 
