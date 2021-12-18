@@ -41,7 +41,7 @@ Les `FlowFile` seront regroupés dans un ficher `CSV` qui sera envoyé vers un t
 
 Une fois les données collectées, nous avons procédés à la création d'un dataset regroupant les outputs de nos différents batchs pour créer un fichier final pour chaque candidat.
 
-Nous avons également effectués plusieurs opérations sur les données collectés via twitter et ceux des élections présidentielles de 2017 tel que:
+Nous avons effectués plusieurs opérations moyennant principalement `Pyspark` sur les données collectés via twitter et ceux des élections présidentielles de 2017 tel que:
 
 - Suppression des doublons.
 - Traitement des symboles.
@@ -65,7 +65,7 @@ Dans le but d'automatiser notre flot de données, nous avons utilisés deux DAGs
 
 Nous avons pu réaliser à partir des données politiques collectées deux applications:
 
-- Une analyse des sentiments.
+- Une analyse des sentiments (`Textblob`).
 - Une carte interactive comportant les statistiques par département (A partir des données structurées collectées) disponible sous le repertoire `/Scripts/temp-plot.html`.
 
 ![enter image description here](https://raw.githubusercontent.com/SofienKh/ECE_Data_Pipeline_Project/main/src/france_map.png)
