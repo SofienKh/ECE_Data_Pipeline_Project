@@ -39,5 +39,19 @@ Nous procédons par la suite à l'extraction des informations les plus pertinent
 Les `FlowFile` seront regroupés dans un ficher `CSV` qui sera envoyé vers un topic `Kafka`.
 ## Traitement des données (mise en forme, nettoyage..)
 
-
+Une fois les données collectées, nous avons procédés à la création d'un dataset regroupant les outputs de nos différents batchs pour créer un fichier final pour chaque candidat.
+Nous avons également effectués plusieurs opérations sur les données collectés via twitter et ceux des élections présidentielles de 2017 tel que:
+- Suppression des doublons.
+- Traitement des symboles.
+- Traitement des dates.
+- Ajout de colonnes (Feature Engineering).
+- Calcul d'agrégats.
+- 
 ##  Orchestration et automatisation du Data Pipeline.
+
+## Applications supplémentaires:
+
+Nous avons pu réaliser à partir des données politiques collectées deux applications:
+- Une carte interactive comportant les statistiques de chaque département (A partir des données structurées collectées).
+- Un Word cloud avec les termes les plus récurrents sur twitter (A partir des données non structurées collectées).
+- Analyse des sentiments.
